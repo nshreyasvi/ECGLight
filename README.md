@@ -4,13 +4,36 @@
   <img src="assets/logo.png" alt="ECG Digitization & Classification Logo" width="180px" style="border-radius: 14px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);" />
 </p>
 
-An advanced, clinical-grade software suite and interactive Streamlit web workstation designed to convert printed/photographed 12-lead ECG paper reports into high-resolution digitized signals, visualize multi-channel time-series data, and perform diagnostic classification.
+An advanced, interactive Streamlit web workstation designed to convert printed/photographed 12-lead paper ECG reports into high-resolution digitized signals and carry out different types of classification over them. The suite is engineered to run with low computational resource requirements, operating seamlessly on a standard consumer laptop GPU (via CUDA) or running completely on CPU.
 
 ---
 
 ## 🖥️ Web Dashboard Workstation Overview
 
-The dashboard provides a premium, responsive user interface built for clinicians, cardiologists, and researchers. It coordinates the digitization and classification pipelines into a unified web application.
+The dashboard provides a premium, responsive user interface designed for research, education, and clinical workflow exploration. It coordinates the digitization and classification pipelines into a unified, lightweight web application.
+
+### Workstation Modules
+
+1. **📷 ECG Image Digitizer**:
+   - Upload any scanned or photographed ECG image (`.png`, `.jpg`, `.jpeg`).
+   - Run the sequential YOLOv11 pipeline step-by-step with real-time progress indicators.
+   - Outputs a summary of detected leads and total samples.
+   - Automatically saves the digitized CSV to disk under `output/digitization/latest_digitized.csv` for downstream consumption.
+   
+2. **📈 ECG Signal Viewer**:
+   - Visualizes multi-channel ECG signals interactively using client-side native Streamlit line charts (supporting zoom, pan, and hover tooltips).
+   - Supports stacked subplots (with distinct clinical colors for each lead: clinical red, teal, deep blue, yellow, purple, etc.) or overlaid graphs.
+   - Displays statistical summaries (mean, standard deviation, min/max, range) and allows row-by-row signal previewing.
+
+3. **❤️ ECG Classification**:
+   - Predicts cardiac conditions using pre-trained ensemble and deep learning classifiers.
+   - Automatically segments raw signals into heartbeats around R-peaks using the Pan-Tompkins algorithm before running inference.
+   - **Inference Mode (No Ground-Truth)**: If the uploaded CSV lacks diagnostic labels, the dashboard displays a downloadable **Predictions Table** detailing predicted class diagnoses and model confidence probabilities.
+   - **Evaluation Mode (With Ground-Truth)**: If labels are present, the page calculates and plots performance metrics (Accuracy, F1-Score, Sensitivity, Specificity, Confusion Matrix).
+
+### Workstation Pipeline Architecture
+
+The diagram below illustrates the comprehensive data flow from image upload through computer vision digitization, grid reconstruction, signal verification, and time-series model inference:
 
 ```mermaid
 graph TD
@@ -48,25 +71,6 @@ graph TD
     end
     class Page3 pageStyle;
 ```
-
-### Workstation Modules
-
-1. **📷 ECG Image Digitizer**:
-   - Upload any scanned or photographed ECG image (`.png`, `.jpg`, `.jpeg`).
-   - Run the sequential YOLOv11 pipeline step-by-step with real-time progress indicators.
-   - Outputs a summary of detected leads and total samples.
-   - Automatically saves the digitized CSV to disk under `output/digitization/latest_digitized.csv` for downstream consumption.
-   
-2. **📈 ECG Signal Viewer**:
-   - Visualizes multi-channel ECG signals interactively using client-side native Streamlit line charts (supporting zoom, pan, and hover tooltips).
-   - Supports stacked subplots (with distinct clinical colors for each lead: clinical red, teal, deep blue, yellow, purple, etc.) or overlaid graphs.
-   - Displays statistical summaries (mean, standard deviation, min/max, range) and allows row-by-row signal previewing.
-
-3. **❤️ ECG Classification**:
-   - Predicts cardiac conditions using pre-trained ensemble and deep learning classifiers.
-   - Automatically segments raw signals into heartbeats around R-peaks using the Pan-Tompkins algorithm before running inference.
-   - **Inference Mode (No Ground-Truth)**: If the uploaded CSV lacks diagnostic labels, the dashboard displays a downloadable **Predictions Table** detailing predicted class diagnoses and model confidence probabilities.
-   - **Evaluation Mode (With Ground-Truth)**: If labels are present, the page calculates and plots performance metrics (Accuracy, F1-Score, Sensitivity, Specificity, Confusion Matrix).
 
 ---
 
