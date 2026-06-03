@@ -1,5 +1,9 @@
 # ⚡ ECG Digitization & Classification Dashboard
 
+<p align="center">
+  <img src="assets/logo.png" alt="ECG Digitization & Classification Logo" width="180px" style="border-radius: 14px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);" />
+</p>
+
 An advanced, clinical-grade software suite and interactive Streamlit web workstation designed to convert printed/photographed 12-lead ECG paper reports into high-resolution digitized signals, visualize multi-channel time-series data, and perform diagnostic classification.
 
 ---
@@ -125,7 +129,7 @@ The repository is structured to maintain a clean root directory, moving utility 
 - Python 3.9
 - CUDA-capable GPU recommended (automatically falls back to CPU if unavailable).
 
-### Conda Environment Installation
+### Conda Environment & Model Setup
 
 1. Clone the repository and navigate to the project directory:
    ```bash
@@ -137,6 +141,25 @@ The repository is structured to maintain a clean root directory, moving utility 
    ```bash
    conda env create -f environment.yml
    conda activate infer
+   ```
+
+3. **Download Pre-Trained Model Weights**:
+   Due to their file sizes, the YOLO detection checkpoints and pre-trained classifiers are hosted externally. Download the `models/` directory from the link below and place it directly in the root of the project:
+   
+   👉 **[Download Pre-Trained Models Directory (ETH Zürich Polybox)](https://polybox.ethz.ch/index.php/s/GDACstPtsoTrrWH)**
+   
+   Once extracted, verify that the weights are located inside the directory tree structure:
+   ```text
+   models/
+   ├── digitization_models/
+   │   ├── yolo11_full/weights/best.pt
+   │   ├── yolo11_lead/weights/best.pt
+   │   ├── yolo11_pulse/weights/best.pt
+   │   └── yolo11_patch/weights/best.pt
+   └── classifier_models/
+       ├── mi_vs_normal_segmented/
+       ├── omi_vs_nonomi/
+       └── ecg_surgery/
    ```
 
 Key packages installed by the environment: `torch 2.7`, `ultralytics 8.3`, `opencv-python 4.11`, `scikit-image 0.24`, `wfdb 4.3`, `patched-yolo-infer 1.3.8`, `sktime`, `streamlit`.
