@@ -8,13 +8,13 @@ An advanced, interactive Streamlit web workstation designed to convert printed/p
 
 <br />
 
+---
+
 <p align="center">
   <img src="assets/scai_lab_logo.png" alt="SCAI Lab Logo" height="55px" style="vertical-align: middle;" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="assets/ETH_Zürich_Logo_black.svg.png" alt="ETH Zürich" height="30px" style="vertical-align: middle;" />
 </p>
-
----
 
 <p align="center">
   <i>in collaboration with</i>
