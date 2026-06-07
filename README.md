@@ -1,13 +1,15 @@
 # ⚡ ECG Digitization & Classification Dashboard
 
-<div style="display: flex; align-items: center; justify-content: center; gap: 35px; margin-bottom: 20px;">
-  <img src="assets/logo.png" alt="ECG Digitization & Classification Logo" width="180px" style="border-radius: 14px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);" />
-  <img src="assets/scai_lab_logo.svg" alt="SCAI Lab Logo" height="100px" />
-</div>
-
-<p align="center">
-  <b>Authors: Shreyasvi Natraj and Cyrus Achtari</b>
-</p>
+<table align="center" border="0" style="border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" valign="middle" style="border: none; padding-right: 40px;">
+      <img src="assets/logo.png" alt="ECG Digitization & Classification Logo" width="180px" style="border-radius: 14px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);" />
+    </td>
+    <td align="center" valign="middle" style="border: none;">
+      <img src="assets/scai_lab_logo.svg" alt="SCAI Lab Logo" height="100px" />
+    </td>
+  </tr>
+</table>
 
 An advanced, interactive Streamlit web workstation designed to convert printed/photographed 12-lead paper ECG reports into high-resolution digitized signals and carry out different types of classification over them. The suite is engineered to run with low computational resource requirements, operating seamlessly on a standard consumer laptop GPU (via CUDA) or running completely on CPU.
 
@@ -316,6 +318,13 @@ This project was developed in collaboration with:
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="assets/Logo_Vanvitelli_university.svg.png" alt="Università della Campania Luigi Vanvitelli" height="35px" style="vertical-align: middle; margin: 0 15px;" />
 </p>
+
+---
+
+## 👥 Authors & Contact
+
+- **Shreyasvi Natraj** — [snatraj@ethz.ch](mailto:snatraj@ethz.ch)
+- **Cyrus Achtari**
 
 ---
 
