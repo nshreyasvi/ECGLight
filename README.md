@@ -3,7 +3,7 @@
 <p align="center">
   <img src="assets/logo.png" alt="ECG Digitization & Classification Logo" width="180px" style="border-radius: 14px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08); margin-bottom: 15px;" />
   <br />
-  <img src="assets/scai_lab_logo.svg" alt="SCAI Lab Logo" height="55px" />
+  <img src="assets/scai_lab_logo.svg" alt="SCAI Lab Logo" height="100px" />
 </p>
 
 An advanced, interactive Streamlit web workstation designed to convert printed/photographed 12-lead paper ECG reports into high-resolution digitized signals and carry out different types of classification over them. The suite is engineered to run with low computational resource requirements, operating seamlessly on a standard consumer laptop GPU (via CUDA) or running completely on CPU.

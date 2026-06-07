@@ -29,7 +29,7 @@ def render_sidebar_logo():
         st.sidebar.markdown(
             f'<div style="text-align: center; padding: 8px 0 4px 0;">'
             f'<img src="data:image/svg+xml;base64,{b64}" alt="SCAI Lab" '
-            f'style="height: 52px;" />'
+            f'style="height: 65px;" />'
             f'</div>',
             unsafe_allow_html=True
         )
