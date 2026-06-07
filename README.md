@@ -1,7 +1,11 @@
 # ⚡ ECG Digitization & Classification Dashboard
 
 <p align="center">
-  <img src="assets/logo.png" alt="ECG Digitization & Classification Logo" width="180px" style="border-radius: 14px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);" />
+  <img src="assets/logo.png" alt="ECG Digitization & Classification Logo" width="180px" style="border-radius: 14px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08); margin-bottom: 15px;" />
+  <br />
+  <img src="assets/scai_lab_logo.png" alt="SCAI Lab Logo" height="55px" />
+  <br />
+  <b>Spinal Cord Injury and Artificial Intelligence (SCAI) Lab</b>
 </p>
 
 An advanced, interactive Streamlit web workstation designed to convert printed/photographed 12-lead paper ECG reports into high-resolution digitized signals and carry out different types of classification over them. The suite is engineered to run with low computational resource requirements, operating seamlessly on a standard consumer laptop GPU (via CUDA) or running completely on CPU.
@@ -198,7 +202,7 @@ The core class [digitization.py](file:///d:/Projects/ECG_Demo/digitization.py) o
    - `yolo11_pulse`: Bounding boxes for the calibration reference pulses (typically 1mV high, representing vertical scale).
 4. **Scale Calibration**: Fits Hough lines to the calibration pulse boundaries. The pixel height determines the voltage scale (`volt/pixel`), while the width determines the time scale (`time/pixel`).
 5. **Grid Construction**: Employs K-Means clustering on lead coordinates to map rows and columns, automatically parsing standard Cabrera orders and grid formats (3×4, 4×3, 6×2, 12×1).
-6. **Signal Extraction**: Traces contours to extract raw pixel centroids, performs baseline correction, applies linear interpolation to bridge gaps, and resamples to a standard **500 Hz** frequency calibrated in **millivolts (mV)**.
+6. **Signal Extraction & Post-Processing**: Traces contours to extract raw pixel centroids, performs baseline correction, applies linear interpolation to bridge gaps, and resamples to a standard **500 Hz** frequency calibrated in **millivolts (mV)**. In addition, an **anti-leakage component filter** is executed per cell crop using connected components analysis to automatically identify the primary waveform trace and strip out smaller, boundary-adjacent components (leaked signals from neighboring leads) that sit far from the row baseline.
 
 ---
 
@@ -289,6 +293,20 @@ python archive/classification/run_inference.py --model omi_vs_nonomi --input dat
 # Custom output file path
 python archive/classification/run_inference.py --model ecg_surgery --input data/ecg_surgery_segmented_50_150_70.csv --output results/surgery_preds.csv
 ```
+
+---
+
+## 🏛️ Affiliated Institutions
+
+Developed in collaboration between the following academic and research organizations:
+
+<p align="center">
+  <img src="assets/ETH_Zürich_Logo_black.svg.png" alt="ETH Zürich" height="32px" style="margin: 0 20px;" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/Logo_of_SUPSI_Scuola_universitaria_professionale_della_Svizzera_italiana_01.png" alt="SUPSI" height="38px" style="margin: 0 20px;" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/Logo_Vanvitelli_university.svg.png" alt="Università della Campania Luigi Vanvitelli" height="38px" style="margin: 0 20px;" />
+</p>
 
 ---
 
