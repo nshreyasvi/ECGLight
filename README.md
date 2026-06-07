@@ -149,6 +149,14 @@ The repository is structured to maintain a clean root directory, moving utility 
    conda activate infer
    ```
 
+   > [!IMPORTANT]
+   > **Windows Compatibility & TensorFlow Setup**:
+   > If you are on Windows and encounter native runtime loading failures (`ImportError: DLL load failed while importing _pywrap_tensorflow_internal: A dynamic link library (DLL) initialization routine failed`), you need to install a stable version pairing of TensorFlow and Protobuf:
+   > ```bash
+   > pip install tensorflow==2.15.0 protobuf==4.25.3
+   > ```
+   > *(Make sure no background Streamlit or Python tasks are running when executing this command, to prevent file locking issues on `.pyd` libraries).*
+
 3. **Download Pre-Trained Model Weights**:
    Due to their file sizes, the YOLO detection checkpoints and pre-trained classifiers are hosted externally. Download the `models/` directory from the link below and place it directly in the root of the project:
    
