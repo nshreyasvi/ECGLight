@@ -1,9 +1,8 @@
 # ==============================================================================
 # ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
 # 
-# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Author: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
 # Contact: snatraj@ethz.ch
-# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
 # Licensed under the Non-Commercial Academic and Research License Agreement.
 # ==============================================================================
 """
@@ -59,16 +58,13 @@ def render_sidebar_author_card():
         <div style="background: linear-gradient(135deg, #FFF1F2 0%, #F8FAFC 100%); 
                     border: 1px solid #FECDD3; border-radius: 10px; padding: 12px; margin-top: 10px; margin-bottom: 5px;">
             <div style="font-size: 0.75rem; font-weight: 700; color: #E63946; text-transform: uppercase; letter-spacing: 0.8px;">
-                ⚡ Lead Author &amp; Owner
+                ⚡ Author
             </div>
             <div style="font-size: 0.95rem; font-weight: 700; color: #1E293B; margin-top: 2px;">
                 Shreyasvi Natraj
             </div>
             <div style="font-size: 0.75rem; color: #64748B; margin-top: 1px;">
                 ETH Zürich • SCAI Lab
-            </div>
-            <div style="font-size: 0.70rem; color: #94A3B8; margin-top: 4px; border-top: 1px dashed #E2E8F0; padding-top: 4px;">
-                © 2026 Shreyasvi Natraj. All Rights Reserved.
             </div>
         </div>
         """,
@@ -79,7 +75,7 @@ def render_sidebar_author_card():
 def render_logo_footer():
     """
     Render institutional logos as a footer bar at the bottom of each page,
-    along with explicit copyright and ownership statement for Shreyasvi Natraj.
+    along with author attribution for Shreyasvi Natraj.
     Order: ETH Zürich → EOC → USI → Vanvitelli.
     """
     logos = [
@@ -110,14 +106,15 @@ def render_logo_footer():
             unsafe_allow_html=True
         )
 
-    # Explicit copyright notice
+    # Author statement
     st.markdown(
         """
         <div style="text-align: center; color: #94A3B8; font-size: 0.78rem; padding: 4px 0 16px 0; line-height: 1.4;">
-            <strong>ECGLight</strong> &copy; 2026 <strong>Shreyasvi Natraj</strong> (ETH Zürich / SCAI Lab). All rights reserved.<br/>
+            <strong>ECGLight</strong> &bull; Author: <strong>Shreyasvi Natraj</strong> (ETH Zürich / SCAI Lab)<br/>
             <span>Released under the Non-Commercial Academic and Research License Agreement.</span>
         </div>
         """,
         unsafe_allow_html=True
     )
+
 

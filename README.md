@@ -4,8 +4,7 @@
 
 # ⚡ ECGLight: Compute-Light Framework for Paper ECG Digitization & Cardiac Screening
 
-[![Lead Author: Shreyasvi Natraj](https://img.shields.io/badge/Lead%20Author-Shreyasvi%20Natraj-E63946.svg?style=flat-square&logo=github)](mailto:snatraj@ethz.ch)
-[![Copyright Notice](https://img.shields.io/badge/Copyright-Shreyasvi%20Natraj%20%7C%20All%20Rights%20Reserved-0D9488.svg?style=flat-square)](#license)
+[![Author: Shreyasvi Natraj](https://img.shields.io/badge/Author-Shreyasvi%20Natraj-E63946.svg?style=flat-square&logo=github)](mailto:snatraj@ethz.ch)
 [![arXiv: 2607.07683](https://img.shields.io/badge/arXiv-2607.07683-b31b1b.svg?style=flat-square&logo=arxiv)](https://arxiv.org/abs/2607.07683)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11-3776AB.svg?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C.svg?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
@@ -24,7 +23,7 @@
 ## 📌 Table of Contents
 
 - [⚡ Project Overview & Key Highlights](#-project-overview--key-highlights)
-- [👑 Authorship, Ownership & Rights](#-authorship-ownership--rights)
+- [👥 Authorship & Team](#-authorship--team)
 - [📰 News & Releases](#-news--releases)
 - [🖥️ Web Workstation GUI Overview](#️-web-workstation-gui-overview)
 - [🚀 Quickstart & Installation](#-quickstart--installation)
@@ -42,7 +41,7 @@
   - [4. Ensemble & Deep Time-Series Classification](#4-ensemble--deep-time-series-classification)
 - [🤝 Collaborating Institutions](#-collaborating-institutions)
 - [📄 Citation](#-citation)
-- [📄 License & Copyright](#-license--copyright)
+- [📄 License](#-license)
 
 ---
 
@@ -69,23 +68,18 @@
 
 ---
 
-## 👑 Authorship, Ownership & Rights
+## 👥 Authorship & Team
 
-> [!IMPORTANT]
-> **ECGLight** was conceptualized, engineered, and is owned by **Shreyasvi Natraj**.
-
-- **Lead Author & Creator**: **Shreyasvi Natraj** ([snatraj@ethz.ch](mailto:snatraj@ethz.ch))  
+- **Author**: **Shreyasvi Natraj** ([snatraj@ethz.ch](mailto:snatraj@ethz.ch))  
   *Department of Information Technology and Electrical Engineering (D-ITET), ETH Zürich*  
   *Spinal Cord Injury and Artificial Intelligence (SCAI) Lab*
-- **Research & Clinical Co-Authors**:
+- **Research & Clinical Collaborators**:
   - **Cyrus Achtari** (ETH Zürich)
   - **Felice Gragnano** (Università della Campania Luigi Vanvitelli)
   - **Andrea Milzi** (RWTH Aachen University Hospital)
   - **Marco Valgimigli** (Istituto Cardiocentro Ticino, EOC / Università della Svizzera italiana)
   - **Diego Paez-Granados** (ETH Zürich / SCAI Lab)
-- **Copyright & Ownership**:  
-  `Copyright (c) 2026 Shreyasvi Natraj (ETH Zürich / SCAI Lab). All rights reserved.`  
-  All algorithmic designs, digitization workflows, model wrappers, and UI implementations are protected under the [Non-Commercial Academic and Research License Agreement](LICENSE).
+
 
 ---
 
@@ -401,14 +395,12 @@ If you use **ECGLight**, its digitization pipeline, or pre-trained models in you
 
 ---
 
-## 📄 License & Copyright
+## 📄 License
 
 **ECGLight** is released under the **Non-Commercial Academic and Research License Agreement**.
 
-```text
-Copyright (c) 2026 Shreyasvi Natraj (ETH Zürich / SCAI Lab). All rights reserved.
-```
-
+- **Author**: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
 - **Permitted**: Free for academic research, education, non-commercial clinical studies, and non-profit evaluation.
-- **Prohibited**: Any commercial integration, paid clinical diagnostic services, corporate consulting, or proprietary sublicensing without prior written permission from the copyright owner.
+- **Prohibited**: Any commercial integration, paid clinical diagnostic services, corporate consulting, or proprietary sublicensing without prior written permission.
 - Full license terms are available in the [LICENSE](LICENSE) file.
+

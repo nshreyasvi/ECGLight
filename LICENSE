@@ -4,16 +4,16 @@ Copyright (c) 2026 Shreyasvi Natraj (ETH Zürich / SCAI Lab). All rights reserve
 
 Redistribution and use of this software (in source or binary forms, with or without modification) and its associated trained model weights/checkpoints are permitted solely for academic, educational, and non-profit research purposes, subject to the following terms and conditions:
 
-1. Redistributions of source code must retain the above copyright notice (specifically naming Shreyasvi Natraj as copyright holder and lead author), this list of conditions, and the following disclaimer.
+1. Redistributions of source code must retain the above notice (specifically naming Shreyasvi Natraj as author), this list of conditions, and the following disclaimer.
 
-2. Redistributions in binary form must reproduce the above copyright notice (specifically naming Shreyasvi Natraj as copyright holder and lead author), this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.
+2. Redistributions in binary form must reproduce the above notice (specifically naming Shreyasvi Natraj as author), this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
 3. The software, source code, binary forms, and all associated model checkpoints/weights (located under the `models/` directory or downloaded separately from Polybox) may NOT be used for any commercial purpose, including but not limited to:
    - Integration into a commercial or profit-generating product, platform, or service.
    - Use in paid consulting, corporate research, clinical trial services, or commercial patient diagnostics.
    - Sublicensing, renting, leasing, selling, or distributing the software or derivatives for financial gain.
 
-4. Attribution Requirement: Any publications, patents, research papers, presentations, or software derivatives that utilize this software, codebase, or the associated digitization/classification pipeline must credit the lead author **Shreyasvi Natraj** and cite the original repository and arXiv publication:
+4. Attribution Requirement: Any publications, patents, research papers, presentations, or software derivatives that utilize this software, codebase, or the associated digitization/classification pipeline must credit the author Shreyasvi Natraj and cite the original repository and arXiv publication:
    - Natraj, S., Achtari, C., Gragnano, F., Milzi, A., Valgimigli, M., & Paez-Granados, D. (2026). ECGLight: Compute-Light Framework For Paper ECG Digitization and Myocardial Infarction Screening. arXiv:2607.07683.
 
 5. Ownership: All rights, title, and interest in and to the ECGLight software, algorithms, architecture, and documentation remain the exclusive property of Shreyasvi Natraj and collaborating academic institutions (ETH Zürich, EOC, USI, Università della Campania Luigi Vanvitelli).

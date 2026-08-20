@@ -1,8 +1,8 @@
 # ==============================================================================
 # ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
 # Author: Shreyasvi Natraj (ETH Zürich / SCAI Lab) <snatraj@ethz.ch>
-# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
 # ==============================================================================
+
 
 # Core Web Application & Dashboard
 streamlit>=1.30.0

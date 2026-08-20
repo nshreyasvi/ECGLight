@@ -1,9 +1,8 @@
 # ==============================================================================
 # ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
 # 
-# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Author: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
 # Contact: snatraj@ethz.ch
-# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
 # Licensed under the Non-Commercial Academic and Research License Agreement.
 # ==============================================================================
 """
@@ -11,13 +10,13 @@ digitization.py
 ===============
 Core ECG image-to-signal conversion pipeline module.
 
-Lead Author: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
-Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+Author: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
 
 The public interface is the :class:`ECGImage` class. Instantiate it with
 four pre-loaded YOLO models and the path to an ECG image, then call
 :meth:`ECGImage.run_full_pipeline` followed by
 :meth:`ECGImage.save_signals_as_csv` (or :meth:`ECGImage.save_signals_as_wfdb`).
+
 
 Module-level helpers
 --------------------
