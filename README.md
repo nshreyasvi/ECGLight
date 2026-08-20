@@ -71,7 +71,7 @@
 ## 👥 Authorship & Team
 
 - **Author**: **Shreyasvi Natraj** ([snatraj@ethz.ch](mailto:snatraj@ethz.ch))  
-  *Department of Information Technology and Electrical Engineering (D-ITET), ETH Zürich*  
+  *Department of Health Science and Technology (D-HEST), ETH Zürich*  
   *Spinal Cord Injury and Artificial Intelligence (SCAI) Lab*
 - **Research & Clinical Collaborators**:
   - **Cyrus Achtari** (ETH Zürich)
