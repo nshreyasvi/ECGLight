@@ -1,8 +1,17 @@
-# utils/page_classifier.py
+# ==============================================================================
+# ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
+# 
+# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Contact: snatraj@ethz.ch
+# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+# Licensed under the Non-Commercial Academic and Research License Agreement.
+# ==============================================================================
 """
 Page 3: ECG Classification.
-Handles CSV upload and pre-trained model inference.
+Handles CSV upload, Pan-Tompkins heartbeat segmentation, pre-trained model inference,
+confusion matrix visualizer, and downloadable diagnostic prediction reports.
 """
+
 
 import os
 import tempfile

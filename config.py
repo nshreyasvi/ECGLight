@@ -1,10 +1,33 @@
-# config.py
+# ==============================================================================
+# ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
+# 
+# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Contact: snatraj@ethz.ch
+# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+# Licensed under the Non-Commercial Academic and Research License Agreement.
+# ==============================================================================
 """
-Centralized configuration settings for the ECG Digitization and Classification Dashboard.
-This holds paths, hyperparameter defaults, and metadata for classification tasks.
+Centralized configuration settings for the ECGLight Digitization & Classification Suite.
+Holds model registry paths, sampling rates, diagnostic task definitions, and project metadata.
 """
 
 import os
+
+# ==============================================================================
+# Project & Author Metadata
+# ==============================================================================
+APP_NAME = "ECGLight"
+APP_VERSION = "2.0.0"
+APP_SUBTITLE = "Compute-Light Framework for Paper ECG Digitization & Cardiac Screening"
+AUTHOR = "Shreyasvi Natraj"
+AUTHOR_EMAIL = "snatraj@ethz.ch"
+AUTHOR_AFFILIATION = "ETH Zürich & SCAI Lab (Spinal Cord Injury and Artificial Intelligence Lab)"
+COPYRIGHT_NOTICE = "Copyright (c) 2026 Shreyasvi Natraj. All rights reserved."
+LICENSE_TYPE = "Non-Commercial Academic and Research License"
+ARXIV_URL = "https://arxiv.org/abs/2607.07683"
+POLYBOX_MODELS_URL = "https://polybox.ethz.ch/index.php/s/GDACstPtsoTrrWH"
+GITHUB_URL = "https://github.com/scai-lab/ECG-Digitization-Classification"
+
 
 # ==============================================================================
 # YOLO Models Settings (For Digitization)

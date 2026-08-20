@@ -1,6 +1,13 @@
-# app.py
+# ==============================================================================
+# ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
+# 
+# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Contact: snatraj@ethz.ch
+# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+# Licensed under the Non-Commercial Academic and Research License Agreement.
+# ==============================================================================
 """
-Main entry point for the ECGLight Dashboard.
+Main entry point for the ECGLight Dashboard & Clinical Workstation.
 Slim router that delegates to page modules in utils/.
 """
 
@@ -16,9 +23,10 @@ import config
 
 # Import utility modules (CSS, branding, hardware, pages)
 from utils.css import inject_custom_css
-from utils.branding import render_sidebar_logo, render_logo_footer
+from utils.branding import render_sidebar_logo, render_sidebar_author_card, render_logo_footer
 from utils.hardware import render_sidebar_hardware
 from utils import page_digitizer, page_csv_viewer, page_classifier
+
 
 # Backend runners are imported lazily inside page routing blocks below
 # to avoid loading torch/sklearn/scipy when the user only needs the CSV viewer.
@@ -85,6 +93,12 @@ st.sidebar.markdown("---")
 
 # Hardware info (cached — only runs once per session)
 render_sidebar_hardware()
+
+st.sidebar.markdown("---")
+
+# Author & Ownership Card
+render_sidebar_author_card()
+
 
 # ==============================================================================
 # YOLO MODEL CHECK (used by Page 1)

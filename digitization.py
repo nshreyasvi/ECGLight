@@ -1,9 +1,20 @@
+# ==============================================================================
+# ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
+# 
+# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Contact: snatraj@ethz.ch
+# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+# Licensed under the Non-Commercial Academic and Research License Agreement.
+# ==============================================================================
 """
 digitization.py
 ===============
-Core ECG image-to-signal conversion module.
+Core ECG image-to-signal conversion pipeline module.
 
-The public interface is the :class:`ECGImage` class.  Instantiate it with
+Lead Author: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+
+The public interface is the :class:`ECGImage` class. Instantiate it with
 four pre-loaded YOLO models and the path to an ECG image, then call
 :meth:`ECGImage.run_full_pipeline` followed by
 :meth:`ECGImage.save_signals_as_csv` (or :meth:`ECGImage.save_signals_as_wfdb`).
@@ -15,6 +26,7 @@ shadow_removal    — Morphological background subtraction.
 line_length       — Euclidean distance between two 2-D points.
 parse_layout_from_folder — Parse rows/cols/layout flags from a folder name.
 """
+
 
 import os
 os.environ["OPENBLAS_NUM_THREADS"] = "1"

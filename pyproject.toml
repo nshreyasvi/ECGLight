@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecglight"
+version = "2.0.0"
+description = "Compute-Light Framework for Paper ECG Digitization & Myocardial Infarction Screening"
+readme = "README.md"
+authors = [
+    { name = "Shreyasvi Natraj", email = "snatraj@ethz.ch" }
+]
+maintainers = [
+    { name = "Shreyasvi Natraj", email = "snatraj@ethz.ch" }
+]
+license = { text = "Non-Commercial Academic and Research License Agreement" }
+requires-python = ">=3.9"
+keywords = [
+    "ecg",
+    "electrocardiogram",
+    "digitization",
+    "yolov11",
+    "cardiology",
+    "myocardial-infarction",
+    "occlusive-mi",
+    "deep-learning",
+    "time-series-classification",
+    "computer-vision",
+    "biomedical-engineering"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Healthcare Industry",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: Free for non-commercial use",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "streamlit>=1.30.0",
+    "numpy>=1.22.0,<2.0.0",
+    "pandas>=1.4.0",
+    "scipy>=1.9.0",
+    "scikit-learn>=1.1.0",
+    "scikit-image>=0.19.0",
+    "opencv-python-headless>=4.7.0",
+    "Pillow>=9.0.0",
+    "matplotlib>=3.5.0",
+    "torch>=2.0.0",
+    "ultralytics>=8.3.0",
+    "wfdb>=4.1.0",
+    "sktime>=0.25.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/scai-lab/ECG-Digitization-Classification"
+"Paper (arXiv)" = "https://arxiv.org/abs/2607.07683"
+"Pre-Trained Models" = "https://polybox.ethz.ch/index.php/s/GDACstPtsoTrrWH"
+"Author" = "https://github.com/nshreyasvi"

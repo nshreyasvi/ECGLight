@@ -1,8 +1,16 @@
-# utils/hardware.py
+# ==============================================================================
+# ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
+# 
+# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Contact: snatraj@ethz.ch
+# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+# Licensed under the Non-Commercial Academic and Research License Agreement.
+# ==============================================================================
 """
-Cached hardware detection for the ECG Dashboard sidebar.
+Cached hardware detection for the ECGLight Dashboard sidebar.
 Uses @st.cache_data to avoid re-running expensive subprocess/torch calls on every Streamlit rerun.
 """
+
 
 import platform
 import subprocess

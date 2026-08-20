@@ -1,8 +1,15 @@
-# utils/branding.py
+# ==============================================================================
+# ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
+# 
+# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Contact: snatraj@ethz.ch
+# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+# Licensed under the Non-Commercial Academic and Research License Agreement.
+# ==============================================================================
 """
-Logo and branding helpers for the ECG Dashboard.
-Renders the SCAI Lab sidebar logo and the institutional footer logos.
-All logo file reads are cached so they only happen once.
+Logo and branding helpers for the ECGLight Dashboard.
+Renders the custom ECGLight vector graphics, SCAI Lab branding, author card, and institutional footer.
+All logo file reads are cached for maximum performance.
 """
 
 import os
@@ -23,29 +30,63 @@ def _load_logo_b64(filename: str) -> str | None:
 
 
 def render_sidebar_logo():
-    """Render the SCAI Lab logo above the dashboard title in the sidebar."""
-    b64 = _load_logo_b64("scai_lab_logo.svg")
-    if b64:
+    """Render the ECGLight vector graphics icon and SCAI Lab badge in the sidebar."""
+    icon_b64 = _load_logo_b64("ecglight_icon.svg")
+    scai_b64 = _load_logo_b64("scai_lab_logo.svg")
+
+    if icon_b64:
+        st.sidebar.markdown(
+            f'<div style="text-align: center; padding: 10px 0 2px 0;">'
+            f'<img src="data:image/svg+xml;base64,{icon_b64}" alt="ECGLight Icon" '
+            f'style="height: 85px; filter: drop-shadow(0 4px 12px rgba(230, 57, 70, 0.25));" />'
+            f'</div>',
+            unsafe_allow_html=True
+        )
+    elif scai_b64:
         st.sidebar.markdown(
             f'<div style="text-align: center; padding: 8px 0 4px 0;">'
-            f'<img src="data:image/svg+xml;base64,{b64}" alt="SCAI Lab" '
+            f'<img src="data:image/svg+xml;base64,{scai_b64}" alt="SCAI Lab" '
             f'style="height: 65px;" />'
             f'</div>',
             unsafe_allow_html=True
         )
 
 
+def render_sidebar_author_card():
+    """Render a sleek author attribution card in the sidebar."""
+    st.sidebar.markdown(
+        """
+        <div style="background: linear-gradient(135deg, #FFF1F2 0%, #F8FAFC 100%); 
+                    border: 1px solid #FECDD3; border-radius: 10px; padding: 12px; margin-top: 10px; margin-bottom: 5px;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #E63946; text-transform: uppercase; letter-spacing: 0.8px;">
+                ⚡ Lead Author &amp; Owner
+            </div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: #1E293B; margin-top: 2px;">
+                Shreyasvi Natraj
+            </div>
+            <div style="font-size: 0.75rem; color: #64748B; margin-top: 1px;">
+                ETH Zürich • SCAI Lab
+            </div>
+            <div style="font-size: 0.70rem; color: #94A3B8; margin-top: 4px; border-top: 1px dashed #E2E8F0; padding-top: 4px;">
+                © 2026 Shreyasvi Natraj. All Rights Reserved.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
 def render_logo_footer():
     """
-    Render institutional logos as a footer bar at the bottom of each page.
-    Order: ETH Zürich → EOC → USI → Vanvitelli (per user preference).
+    Render institutional logos as a footer bar at the bottom of each page,
+    along with explicit copyright and ownership statement for Shreyasvi Natraj.
+    Order: ETH Zürich → EOC → USI → Vanvitelli.
     """
-    # Ordered list: (filename, alt-text, height)
     logos = [
-        ("ETH_Zürich_Logo_black.svg.png", "ETH Zürich", "32px"),
-        ("eoc_logo.png", "Istituto Cardiocentro Ticino (EOC)", "38px"),
-        ("usi_logo.png", "USI", "38px"),
-        ("Logo_Vanvitelli_university.svg.png", "Università della Campania Luigi Vanvitelli", "38px"),
+        ("ETH_Zürich_Logo_black.svg.png", "ETH Zürich", "30px"),
+        ("eoc_logo.png", "Istituto Cardiocentro Ticino (EOC)", "36px"),
+        ("usi_logo.png", "USI", "36px"),
+        ("Logo_Vanvitelli_university.svg.png", "Università della Campania Luigi Vanvitelli", "36px"),
     ]
 
     logo_html_items = []
@@ -54,16 +95,29 @@ def render_logo_footer():
         if b64:
             logo_html_items.append(
                 f'<img src="data:image/png;base64,{b64}" alt="{alt}" '
-                f'style="height: {height}; opacity: 0.7; transition: opacity 0.2s ease;" '
-                f'onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7" />'
+                f'style="height: {height}; opacity: 0.75; transition: opacity 0.2s ease;" '
+                f'onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.75" />'
             )
+
+    st.markdown("---")
 
     if logo_html_items:
         logos_row = "".join(logo_html_items)
-        st.markdown("---")
         st.markdown(
             f'<div style="display: flex; align-items: center; justify-content: center; '
-            f'gap: 36px; padding: 12px 0 8px 0; flex-wrap: wrap;">'
+            f'gap: 36px; padding: 8px 0 10px 0; flex-wrap: wrap;">'
             f'{logos_row}</div>',
             unsafe_allow_html=True
         )
+
+    # Explicit copyright notice
+    st.markdown(
+        """
+        <div style="text-align: center; color: #94A3B8; font-size: 0.78rem; padding: 4px 0 16px 0; line-height: 1.4;">
+            <strong>ECGLight</strong> &copy; 2026 <strong>Shreyasvi Natraj</strong> (ETH Zürich / SCAI Lab). All rights reserved.<br/>
+            <span>Released under the Non-Commercial Academic and Research License Agreement.</span>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+

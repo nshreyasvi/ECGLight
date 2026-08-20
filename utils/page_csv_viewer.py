@@ -1,9 +1,17 @@
-# utils/page_csv_viewer.py
+# ==============================================================================
+# ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
+# 
+# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Contact: snatraj@ethz.ch
+# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+# Licensed under the Non-Commercial Academic and Research License Agreement.
+# ==============================================================================
 """
 Page 2: ECG Signal Viewer.
 Upload any CSV file or view the latest digitized signals natively with interactive Streamlit charts.
-Includes signal trimming tool for individual leads.
+Includes multi-channel overlay, stacked plots, and signal trimming tools for individual leads.
 """
+
 
 import os
 import numpy as np

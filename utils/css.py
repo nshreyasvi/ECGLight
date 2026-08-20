@@ -1,8 +1,16 @@
-# utils/css.py
+# ==============================================================================
+# ECGLight: Compute-Light Framework for Paper ECG Digitization & Classification
+# 
+# Lead Author & Developer: Shreyasvi Natraj (ETH Zürich / SCAI Lab)
+# Contact: snatraj@ethz.ch
+# Copyright (c) 2026 Shreyasvi Natraj. All rights reserved.
+# Licensed under the Non-Commercial Academic and Research License Agreement.
+# ==============================================================================
 """
-Centralized CSS theming for the ECG Dashboard.
-Injects the complete light clinical theme stylesheet.
+Centralized CSS theming for the ECGLight Dashboard.
+Injects the complete light clinical theme stylesheet with custom micro-animations and typography.
 """
+
 
 import streamlit as st
 
