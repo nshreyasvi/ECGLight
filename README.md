@@ -22,8 +22,8 @@
 
 ## 📌 Table of Contents
 
-- [⚡ Project Overview & Key Highlights](#-project-overview--key-highlights)
 - [📰 News & Releases](#-news--releases)
+- [⚡ Project Overview & Key Highlights](#-project-overview--key-highlights)
 - [🖥️ Web Workstation GUI Overview](#️-web-workstation-gui-overview)
 - [🚀 Quickstart & Installation](#-quickstart--installation)
   - [Option A: Conda Environment (Recommended)](#option-a-conda-environment-recommended)
@@ -44,6 +44,13 @@
 
 ---
 
+## 📰 News & Releases
+
+- **[2026/07]** 📄 **arXiv Preprint Released**: [*ECGLight: Compute-Light Framework For Paper ECG Digitization and Myocardial Infarction Screening*](https://arxiv.org/abs/2607.07683) (arXiv:2607.07683).
+- **[2026/06]** 🚀 **v2.0 Release**: Comprehensive interactive Streamlit Workstation, YOLOv11 multi-scale detector checkpoints, and standalone inference suite.
+
+---
+
 ## ⚡ Project Overview & Key Highlights
 
 **ECGLight** bridges the gap between historical paper electrocardiograms and modern AI diagnostic pipelines. Designed specifically for low-resource clinics, rural healthcare centers, and standard laptop hardware, ECGLight extracts clean, calibrated **500 Hz 12-lead time-series signals** from smartphone photos or flatbed scans in **<30 seconds per ECG on standard CPUs** without requiring cloud servers or expensive GPUs.
@@ -57,13 +64,6 @@
   - **91.43% Accuracy** ($F_1 = 0.9140$) for pre- vs. post-procedural MI differentiation.
 - **⚡ Compute-Light & Ultra-Fast**: Runs natively on standard consumer CPUs (<30s per record) or CUDA GPUs (<4s per record).
 - **🖥️ Full Clinical Workstation GUI**: Interactive Streamlit application offering live digitization preview, interactive multi-lead signal exploration, automatic R-peak segmentation, and one-click diagnostic prediction exports.
-
----
-
-## 📰 News & Releases
-
-- **[2026/07]** 📄 **arXiv Preprint Released**: [*ECGLight: Compute-Light Framework For Paper ECG Digitization and Myocardial Infarction Screening*](https://arxiv.org/abs/2607.07683) (arXiv:2607.07683).
-- **[2026/06]** 🚀 **v2.0 Release**: Comprehensive interactive Streamlit Workstation, YOLOv11 multi-scale detector checkpoints, and standalone inference suite.
 
 ---
 
