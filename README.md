@@ -71,10 +71,6 @@
 
 The ECGLight workstation provides an interactive, clinical-grade interface:
 
-<div align="center">
-  <img src="assets/ecglight_icon.svg" alt="ECGLight Crest" width="110px" />
-</div>
-
 1. **📷 Page 1: ECG Image Digitizer**
    - Drag-and-drop paper ECG photos or flatbed scans (`.png`, `.jpg`, `.jpeg`).
    - Real-time pipeline progress reporting: Shadow removal $\rightarrow$ YOLO detection $\rightarrow$ Scale calibration $\rightarrow$ Signal tracing $\rightarrow$ 500 Hz resampling.
