@@ -48,13 +48,6 @@
 
 **ECGLight** bridges the gap between historical paper electrocardiograms and modern AI diagnostic pipelines. Designed specifically for low-resource clinics, rural healthcare centers, and standard laptop hardware, ECGLight extracts clean, calibrated **500 Hz 12-lead time-series signals** from smartphone photos or flatbed scans in **<30 seconds per ECG on standard CPUs** without requiring cloud servers or expensive GPUs.
 
-```
-   ┌───────────────────────┐       ┌──────────────────────┐       ┌────────────────────────┐
-   │  📸 Paper ECG Photo   │ ───►  │  ⚡ ECGLight Pipeline │ ───►  │  ❤️ Calibrated 500 Hz  │
-   │  (Smartphone / Scan)  │       │  (YOLOv11 + CV Trace)│       │  Signals & MI Decision │
-   └───────────────────────┘       └──────────────────────┘       └────────────────────────┘
-```
-
 ### ✨ Core Capabilities & Benchmark Results
 
 - **📷 High-Fidelity Signal Digitization**: Multi-stage computer vision workflow integrating four sequential YOLOv11 models, Hough transform pulse calibration, K-Means grid reconstruction (3×4, 4×3, 6×2, 12×1 formats), and connected-component anti-leakage filters.
