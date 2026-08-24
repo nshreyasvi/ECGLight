@@ -23,7 +23,6 @@
 ## 📌 Table of Contents
 
 - [⚡ Project Overview & Key Highlights](#-project-overview--key-highlights)
-- [👥 Authorship & Team](#-authorship--team)
 - [📰 News & Releases](#-news--releases)
 - [🖥️ Web Workstation GUI Overview](#️-web-workstation-gui-overview)
 - [🚀 Quickstart & Installation](#-quickstart--installation)
@@ -65,21 +64,6 @@
   - **91.43% Accuracy** ($F_1 = 0.9140$) for pre- vs. post-procedural MI differentiation.
 - **⚡ Compute-Light & Ultra-Fast**: Runs natively on standard consumer CPUs (<30s per record) or CUDA GPUs (<4s per record).
 - **🖥️ Full Clinical Workstation GUI**: Interactive Streamlit application offering live digitization preview, interactive multi-lead signal exploration, automatic R-peak segmentation, and one-click diagnostic prediction exports.
-
----
-
-## 👥 Authorship & Team
-
-- **Author**: **Shreyasvi Natraj** ([snatraj@ethz.ch](mailto:snatraj@ethz.ch))  
-  *Department of Health Science and Technology (D-HEST), ETH Zürich*  
-  *Spinal Cord Injury and Artificial Intelligence (SCAI) Lab*
-- **Research & Clinical Collaborators**:
-  - **Cyrus Achtari** (ETH Zürich)
-  - **Felice Gragnano** (Università della Campania Luigi Vanvitelli)
-  - **Andrea Milzi** (RWTH Aachen University Hospital)
-  - **Marco Valgimigli** (Istituto Cardiocentro Ticino, EOC / Università della Svizzera italiana)
-  - **Diego Paez-Granados** (ETH Zürich / SCAI Lab)
-
 
 ---
 
